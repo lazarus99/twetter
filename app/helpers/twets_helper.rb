@@ -1,13 +1,6 @@
 module TwetsHelper
   PATTERN = /(@\w+)/
-  
-  def mentionFinder(twet)
-      if twet.match(/(@\w+)/)
-      return true
-      else return false
-      end
-  end
-  
+   
   def userLinker(twet, name)
       user = User.where(:username => name[1..-1]).first     
     if user  
